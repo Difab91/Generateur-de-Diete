@@ -154,7 +154,7 @@ def list():
 
     return {
         'PetitDej': PetitDej,
-        'JuicePti': Juicepti,
+        'Juicepti': Juicepti,
         'EntreDejDinner': EntreDejDinner,
         'DejDinner': DejDinner,
         'Fruits': Fruits,
