@@ -281,23 +281,15 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
         lipdin = lipdin + dinner[i][3]
 
     ################################################################
-    resultat_repas = ""  # Initialisation de la variable
+
+
+    # Initialisation de la variable
 
     if cal > 2600:
-        resultat_repas += f" Petit dejeuner({protpt}g de protéines, {glupt}g de glucides, {lippt}g de lipides): {pt}\n"
-        resultat_repas += f"collation du matin({protcol2}g de protéines, {glucol2}g de glucides, {lipcol2}g de lipides): {col2}\n"
-        resultat_repas += f"dejeuner({protdej}g de protéines, {gludej}g de glucides, {lipdej}g de lipides): {dej}\n"
-        resultat_repas += f"collation de l'après-midi({protcol1}g de protéines, {glucol1}g de glucides, {lipcol1}g de lipides): {col1}\n"
-        resultat_repas += f"dinner({protdin}g de protéines, {gludin}g de glucides, {lipdin}g de lipides): {din}\n"
-        resultat_repas += f"Soit un total de {protdiet} grammes de protéines, {gludiet} grammes de glucides, {lipdiet} grammes de lipides ce qui fait un total de {cal2} calories"
-    else:
-        resultat_repas += f" Petit dejeuner({protpt}g de protéines, {glupt}g de glucides, {lippt}g de lipides): {pt}\n"
-        resultat_repas += f"collation({protcol1}g de protéines, {glucol1}g de glucides, {lipcol1}g de lipides): {col1}\n"
-        resultat_repas += f"dejeuner({protdej}g de protéines, {gludej}g de glucides, {lipdej}g de lipides): {dej}\n"
-        resultat_repas += f"dinner({protdin}g de protéines, {gludin}g de glucides, {lipdin}g de lipides): {din}\n"
-        resultat_repas += f"Soit un total de {protdiet} grammes de protéines, {gludiet} grammes de glucides, {lipdiet} grammes de lipides ce qui fait un total de {cal2} calories"
+        return protpt, glupt, lippt, pt, protcol2, glucol2, lipcol2, col2, protdej, gludej, lipdej, dej, protcol1, glucol1, lipcol1, col1, protdin, gludin, lipdin, din, protdiet, gludiet, lipdiet, cal2
 
-    return resultat_repas
+    else:
+        return protpt, glupt, lippt, pt, protdej, gludej, lipdej, dej, protcol1, glucol1, lipcol1, col1, protdin, gludin, lipdin, din, protdiet, gludiet, lipdiet, cal2
 
 
 

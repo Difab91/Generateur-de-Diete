@@ -1,0 +1,20 @@
+detailler entrée, plat, dessert pour les repas (dej, dinner)
+
+ameliorer l'affichage : afficher d'abord le nombre de prot, puis glucides une fois qu'il est rentré etc.... ,refaire les textes, mise en forme , couleur etc....
+
+
+ajout d'un bouton "cette genération ne me convient pas" qui relance tout
+
+passer au generation sur week (afficher les dietes dans un calandrier de la semaine) , rajouter une fonctionalité importer sur  mon calendrier
+
+agrandir la BD
+
+ajout des fonctionalités sur les regimes alimentaires spéciaux en excluant les aliments concernés (donc rajout dans les liste de la bd les regimes compatibles pour chaque aliment)
+
+rajouter des liens qui renvoient vers des recettes pour certains plat
+
+se concerter avec Amélie
+
+
+
+
