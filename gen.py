@@ -2,6 +2,16 @@ import random
 
 from data import list
 
+def calcule_diet(diet):
+    protdiet = 0
+    gludiet = 0
+    lipdiet = 0
+    for i in range(0, len(diet)):
+        protdiet = protdiet + diet[i][1]
+        gludiet = gludiet + diet[i][2]
+        lipdiet = lipdiet + diet[i][3]
+
+    return protdiet, gludiet, lipdiet
 
 def algo(bp,hp,hl,bl,hg,bg,cal):
 
@@ -49,13 +59,7 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
             diet = petitdej + dejeuner + dessert1 + collation1 + dinner + dessert2
         else:
             diet = petitdej + collation2 + dejeuner + dessert1 + collation1 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             entre1 = random.choice(EntreDejDinner)
             totdej= totdej + entre1
@@ -63,13 +67,7 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
                 diet = petitdej + entre1 + dejeuner + dessert1 + collation1 + dinner + dessert2
             else:
                 diet = petitdej + collation2 + entre1 + dejeuner + dessert1 + collation1 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             complement1 = random.choice(complementRepas)
             totdej = totdej + complement1
@@ -77,13 +75,7 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
                 diet = petitdej + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
             else:
                 diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             dessert1 = dessert1 + fruit2
             totdej= totdej + fruit2
@@ -91,13 +83,7 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
             diet =  petitdej + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
         else:
             diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg and random.randint(
                 1, 3) == 1:
             petitdej = petitdej + jus
@@ -105,39 +91,21 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
             diet = petitdej + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
         else:
             diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             petitdej = petitdej + fruits1
         if cal < 2600:
             diet = petitdej + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
         else:
             diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             collation1 = collation1 + collation4
         if cal < 2600:
             diet = petitdej  + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
         else:
             diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             entre2 = random.choice(EntreDejDinner)
             totdin = totdin + entre2
@@ -145,13 +113,7 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
                 diet = petitdej + entre1 + dejeuner + complement1 + dessert1 + collation1 + entre2 + dinner + dessert2
             else:
                 diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + entre2 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             complement2 = random.choice(complementRepas)
             totdin = totdin + complement2
@@ -159,13 +121,7 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
                 diet = petitdej + entre1 + dejeuner + complement1 + dessert1 + collation1 + entre2 + dinner + complement2 + dessert2
             else:
                 diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + entre2 + dinner + complement2 + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             dessert2 = dessert2 + fruit3
             totdin = totdin + fruit3
@@ -173,26 +129,15 @@ def algo(bp,hp,hl,bl,hg,bg,cal):
             diet = petitdej + entre1 + dejeuner + complement1 + dessert1 + collation1 + entre2 + dinner + complement2 + dessert2
         else:
             diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + entre2 + dinner + complement2 + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
         if protdiet < bp or lipdiet < bl or gludiet < bg and protdiet < hp and lipdiet < hl and gludiet < hg:
             collation2 = collation2 + collation3
         if cal < 2600:
             diet = petitdej + entre1 + dejeuner + complement1 + dessert1 + collation1 + entre2 + dinner + dessert2
         else:
             diet = petitdej + collation2 + entre1 + dejeuner + complement1 + dessert1 + collation1 + entre2 + dinner + dessert2
-        protdiet = 0
-        gludiet = 0
-        lipdiet = 0
-        for i in range(0, len(diet)):
-            protdiet = protdiet + diet[i][1]
-            gludiet = gludiet + diet[i][2]
-            lipdiet = lipdiet + diet[i][3]
+        protdiet, gludiet, lipdiet = calcule_diet(diet)
+
 
 
 
